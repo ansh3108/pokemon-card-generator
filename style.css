@@ -6,14 +6,13 @@
 }
 body {
   background-color: #eff3ff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 .container {
   width: 350px;
-  text-align: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
 #card {
   position: relative;
@@ -21,30 +20,52 @@ body {
   padding: 30px 20px;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
-  background-color: #ffffff;
 }
 #card img {
   display: block;
   width: 180px;
   max-height: 200px;
+  position: relative;
   margin: 20px auto;
 }
 .poke-name {
+  text-align: center;
   font-weight: 600;
-  margin: 10px 0;
+}
+.types {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+.types .type {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: 600;
 }
 .stats {
   display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+.stats p {
+  color: #404060;
 }
 #btn {
+  display: block;
   padding: 15px 60px;
   font-size: 18px;
   background-color: #101010;
   color: #ffffff;
+  position: relative;
+  margin: 30px auto;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
+}
+.error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
 }
